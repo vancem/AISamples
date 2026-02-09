@@ -74,7 +74,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def compute_du(
     path: Path,
-    base_path: Path,
     file_count: list[int],
     dot_callback: tuple[int, int] | None,
 ) -> DirUsage | None:
@@ -112,7 +111,7 @@ def compute_du(
                             print()
                             line_len[0] = 0
             elif stat.S_ISDIR(st.st_mode):
-                child = compute_du(entry, base_path, file_count, dot_callback)
+                child = compute_du(entry, file_count, dot_callback)
                 if child is not None:
                     usage.inclusive_size += child.inclusive_size
                     children.append(child)
@@ -164,7 +163,7 @@ def main() -> None:
     dot_callback = (file_count, line_len)
 
     start = time.perf_counter()
-    root = compute_du(folder, folder, file_count, dot_callback)
+    root = compute_du(folder, file_count, dot_callback)
 
     if line_len[0] > 0:
         print()
