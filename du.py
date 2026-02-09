@@ -134,12 +134,12 @@ def flatten_by_percent(
     for child in du.children:
         flatten_by_percent(child, min_size, result)
 
-
+# TODO: remove this function, it is not needed.
 def format_size_mb(size_bytes: int) -> str:
     """Format size in MB with 2 decimal places."""
     return f"{size_bytes / 1_000_000:.2f}M"
 
-
+# TODO: simplify this, the output path separator can be whatever is most convenient for the code.  
 def format_path(path: Path, base: Path) -> str:
     """Format path for display, using native separators."""
     try:
