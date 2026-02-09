@@ -1,0 +1,35 @@
+C:\Users\Vance\OneDrive\Documents>du .
+Getting disk usage for: .
+..................................................
+Elaped time = 00:00:00.2186002
+
+Inclusive     Exclusive       Directory
+  Size           Size
+----------------------------------------------------------------------------
+  4123.27M      282.59M      .
+  2955.53M        2.17M      .\callerSchool
+  1655.98M        0.00M      .\callerSchool\purchasedMusic
+  1364.92M        0.00M      .\callerSchool\purchasedMusic\singingCalls
+  1289.26M       68.05M      .\callerSchool\sqview
+  1201.64M      649.30M      .\callerSchool\sqview\mp3
+   358.71M      358.71M      .\callerSchool\sqview\mp3\patter
+   206.62M      206.62M      .\callerSchool\purchasedMusic\patter
+   169.27M       73.72M      .\bin
+   168.04M        0.00M      .\desk1
+   168.04M       58.81M      .\desk1\Documents
+   156.38M       10.00M      .\old
+   156.04M      156.04M      .\callerSchool\sqview\mp3\vocal
+   143.77M        1.51M      .\old\Teals
+   140.41M       66.10M      .\old\Teals\old
+    83.16M        0.07M      .\My Kindle Content
+    81.77M       55.50M      .\sqview
+    75.29M       75.29M      .\callerSchool\purchasedMusic\singingCalls\CRC 215 - Shut Up And Dance With Me
+    64.95M        0.00M      .\old\Teals\old\2015
+    55.09M        0.00M      .\github
+    54.36M       49.86M      .\old\Teals\old\2015\orig
+    52.05M        0.00M      .\github\neutralinojs-desktop-samples
+    45.98M       45.98M      .\callerSchool\purchasedMusic\singingCalls\AEGO 301 - Sweet Caroline
+    44.85M       30.60M      .\HeatPump
+    42.75M       42.75M      .\My Kindle Content\B003ODIZL6_EBOK
+    41.63M        0.00M      .\desk1\Documents\old
+    41.63M       13.79M      .\desk1\Documents\old\office
