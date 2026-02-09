@@ -7,10 +7,19 @@ and sorts the directories by inclusive size, and prints all entries that are
 larger than a minimum size. This lets you quickly determine which areas of your
 file system hierarchy are consuming space.
 
+The output should be in MB uniformly to 2 decimal places rounded (so it may
+round down to 0). Large numbers may exceed the space and make the columns not
+line up, but that is OK>
+
+Symbolic links should not be followed. Non-file objects should be ignored.  
+Errors accessing files/directories will be skiped (but a count of such errors
+should be kept, and reported before printing the data)
+
 Because this enumeration may take a while, the utility will print a dot for
-every 100 files it processes. After printing 80 dots a newline is output so that
-the output line does not get too long. After the last dot, it outputs a newline
-and a the time it took to run.
+every 100 files it processes (it is not too important exactly what is counted,
+just that the dot represents a rough amount of progress). After printing 80 dots
+a newline is output so that the output line does not get too long. After the
+last dot, it outputs a newline and a the time it took to run.
 
 It should also respond to the argument -? printing a help message and indicated
 in the next section. There is also a section which shows a sample output.
@@ -27,14 +36,16 @@ language for command line utilities.
     Parameters:
         [folder]        The directory to summarize, defaults to the current directory
     Qualifiers:
-        [-Percent:Num]   Trim directories to less than this percentage defaults to 1.
+        [-Percent Num]   Trim directories to less than this percentage defaults to 1.
+                         Thus by default only folders with >= to 1% of the total
+                         sum will be printed in the final report.
 
 ## Sample Output
 
         > du.py
         Getting disk usage for: .
         ..................................................
-        Elaped time = 00:00:00.21
+        Elapsed time = 00:00:00.21
 
         Inclusive     Exclusive       Directory
         Size           Size
